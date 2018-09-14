@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html" 
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+    <h:outputStylesheet library="css" name="bootstrap.min.css" />
+    <title>Atividade 2</title>
+    <style type="text/css">
+        .updateBtnStyle {
+        	width: 80px !important;        	
+        }
+    </style>
+</h:head>
+<h:body>
+        <h:form id="form" class="form-horizontal">
+            <div class="form-group">
+                <div class="col-sm-2"></div>
+                <h2 style="text-align: center" class="col-sm-4">Editar serie</h2>
+            </div>
+            <hr/>
+            <div class="form-group">
+                <h:outputLabel for="titulo" class="control-label col-sm-2">Titulo:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="titulo-id" value="#{editSerieObj.titulo}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="genero" class="control-label col-sm-2">Genero:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="genero-id" value="#{editSerieObj.genero}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="nota" class="control-label col-sm-2">Nota:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="nota-id" value="#{editSerieObj.nota}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="temporadas" class="control-label col-sm-2">Temporadas:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="temporadas-id" value="#{editSerieObj.temporadas}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="inicio" class="control-label col-sm-2">Inicio:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="inicio-id" value="#{editSerieObj.inicio}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4">
+                    <h:commandButton value="Update" action="#{serieBean.updateDetalhesSerie(editSerieObj)}" class="btn btn-primary updateBtnStyle" />
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>
